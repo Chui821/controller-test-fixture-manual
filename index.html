@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>海信商冷控制器检测工装使用说明书</title>
+<style>
+  :root {
+    --ink: #002a5c;
+    --ink-2: #004a8f;
+    --brand: #e60012;
+    --text: #333;
+    --muted: #7a8494;
+    --line: #e6eaef;
+    --bg-soft: #f5f7fa;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", "Hiragino Sans GB", sans-serif;
+    background: var(--bg-soft);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .header {
+    background: linear-gradient(150deg, var(--ink) 0%, var(--ink-2) 100%);
+    color: #fff;
+    padding: 34px 24px 28px;
+  }
+  .header .wrap { max-width: 720px; margin: 0 auto; }
+  .brand {
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #d6e2f2;
+    margin-bottom: 10px;
+  }
+  .header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 1px;
+  }
+  .header .sub {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #d6e2f2;
+  }
+  .accent {
+    width: 46px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--brand);
+    margin-top: 16px;
+  }
+  .main { max-width: 720px; margin: 0 auto; padding: 24px 20px 40px; }
+  .intro {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 18px;
+  }
+  .intro strong { color: var(--ink); font-weight: 600; }
+  .figure {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px;
+    cursor: zoom-in;
+  }
+  .figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  .figure .hint {
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+    padding-top: 10px;
+  }
+  .tip {
+    margin-top: 18px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--brand);
+    border-radius: 6px;
+    padding: 12px 14px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .footer {
+    background: #fff;
+    border-top: 1px solid var(--line);
+    text-align: center;
+    padding: 18px 16px 26px;
+    font-size: 12px;
+    color: #a6aebb;
+  }
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    padding: 20px;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img {
+    max-width: 100%;
+    max-height: 92vh;
+    border-radius: 4px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  }
+  .lightbox .close {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    color: #fff;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 6px;
+    user-select: none;
+  }
+  @media (min-width: 640px) {
+    .header h1 { font-size: 30px; }
+    .header { padding: 44px 32px 34px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap">
+    <div class="brand">HISENSE 商用冷链</div>
+    <h1>海信商冷控制器检测工装使用说明书</h1>
+    <div class="sub">本说明书适用于海信自有“智能服务”平台产品控制器检测</div>
+    <div class="accent"></div>
+  </div>
+</header>
+
+<main class="main">
+  <div class="intro">
+    请点击下方图片 <strong>放大查看</strong> 说明书内容；如说明书内容更新，请重新扫码获取最新版本。
+  </div>
+
+  <div class="figure" id="figure" role="button" aria-label="点击放大查看说明书">
+    <img src="https://aka.doubaocdn.com/s/nDfXV0aUNY" alt="海信商冷控制器检测工装使用说明书">
+    <div class="hint">点击图片可放大查看</div>
+  </div>
+
+  <div class="tip">
+    适用范围：海信自有“智能服务”平台产品控制器。客户锁机禁止更换控制器维修，详情以本说明书为准。
+  </div>
+</main>
+
+<footer class="footer">
+  海信商用冷链 · 控制器检测工装使用说明
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <span class="close" id="closeBtn" aria-label="关闭">×</span>
+  <img id="lbImg" src="https://aka.doubaocdn.com/s/nDfXV0aUNY" alt="海信商冷控制器检测工装使用说明书（放大）">
+</div>
+
+<script>
+(function () {
+  var figure = document.getElementById('figure');
+  var lightbox = document.getElementById('lightbox');
+  function open() {
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  figure.addEventListener('click', open);
+  lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox || e.target.id === 'closeBtn') close();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') close();
+  });
+})();
+</script>
+</body>
+</html>
